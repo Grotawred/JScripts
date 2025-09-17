@@ -1,11 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Old knowledge</title>
+  <meta charset="UTF-8" />
+  <title>Особиста сторінка</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    
+  <div class="site-header">
+    <div class="logo">MySite</div>
+    <div class="site-nav">
+      <a href="#about">Про мене</a>
+      <a href="#gallery">Галерея</a>
+      <a href="#contacts">Контакти</a>
+    </div>
+  </div>
+
+  <div class="layout">
+    <div class="content">
+      <div class="section about" id="about">
+        <h2>Про мене</h2>
+        <p>Короткий опис про себе…</p>
+      </div>
+
+      <div class="section gallery" id="gallery">
+        <h2>Галерея</h2>
+        <div class="photos">
+          <div class="photo"><img src="image1.jpg"></div>
+          <div class="photo"><img src="image2.jpg"></div>
+          <div class="photo"><img src="image3.jpg"></div>
+        </div>
+      </div>
+
+      <div class="section contacts" id="contacts">
+        <h2>Контакти</h2>
+        <p>Email: <a href="mailto:student@example.com">student@example.com</a></p>
+      </div>
+    </div>
+
+    <div class="side">
+      <div class="widget">
+        <h3>Сайдбар</h3>
+        <p>Тут згодом з’являться відгуки, останні фото тощо.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="site-footer">
+    <p>© 2025 Мій сайт</p>
+  </div>
 </body>
 </html>
