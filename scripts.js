@@ -15,10 +15,6 @@ forecastTitle.style.display = 'none';
 
 form.addEventListener('submit', async (e) =>  {
     e.preventDefault();
-    statusDiv.style.display = 'none';
-    cityName.textContent = ``;
-    temperature.textContent = ``;
-    forecastTitle.style.display = 'none';
 
     const city = cityInput.value;
     statusDiv.style.display = 'block';
@@ -27,12 +23,13 @@ form.addEventListener('submit', async (e) =>  {
     try{
         const location = await searchCity(city);
 
+        statusDiv.style.display = 'none';
+
+        cityName.textContent = `${location.results[0].name}`;
         const lat = location.results[0].latitude;
         const long = location.results[0].longitude;
 
         const weatherResult =  await getWeather(lat, long);
-        statusDiv.style.display = 'none';
-        cityName.textContent = `${location.results[0].name}`;
         temperature.textContent = `Temperature: ${weatherResult.current_weather.temperature} ${weatherResult.current_weather_units.temperature}`;
         forecastTitle.style.display = 'block';
         const date = weatherResult.daily.time;
